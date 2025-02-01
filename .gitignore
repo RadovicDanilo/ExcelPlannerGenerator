@@ -1,10 +1,32 @@
-# For projects using Nanoc (http://nanoc.ws/)
+# Ignore Excel files
+*.xlsx
+*.xlsm
+*.xlsb
+*.xltx
+*.xltm
 
-# Default location for output (needs to match output_dir's value found in nanoc.yaml)
-output/
+# Ignore package-specific files
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+*.log
+*.tmp
 
-# Temporary file directory
-tmp/nanoc/
+# Ignore user-specific files
+.vscode/
+*.user
+*.suo
+*.cache
+*.config
+*.csproj.user
 
-# Crash Log
-crash.log
+# Ignore build artifacts
+Debug/
+Release/
+
+# Ignore temporary files
+~$*
+/.cr
+/.vs
