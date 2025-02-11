@@ -32,24 +32,24 @@ class ExcelPlanner
             worksheet.Cells.Style.Fill.PatternType = ExcelFillStyle.None; // Remove all default styles
 
             // === Define Styles ===
-            CreateHeaderStyle(package, "HeaderStyle", Color.FromArgb(255, 200, 10));
-            CreateHeaderStyle(package, "WorkdayStyle", Color.FromArgb(200, 150, 10), true, 14);
+            CreateHeaderStyle(package, "HeaderStyle", Color.FromArgb(255, 198, 26));
+            CreateHeaderStyle(package, "WorkdayStyle", Color.FromArgb(255, 150, 0), true, 14);
             CreateTimeColumnStyle(package, "TimeColumnStyle", Color.LightBlue);
             CreateHeaderStyle(package, "NoteStyle", Color.FromArgb(255, 250, 150));
 
             // === User Defined Colors ===
             CreateCellStyle(package, "-NormalCellStyle", Color.White);
-            CreateCellStyle(package, "-RedCellStyle", Color.FromArgb(255, 204, 203));
-            CreateCellStyle(package, "-BlueCellStyle", Color.FromArgb(173, 216, 230));
-            CreateCellStyle(package, "-GreenCellStyle", Color.FromArgb(194, 255, 194));
-            CreateCellStyle(package, "-YellowCellStyle", Color.FromArgb(255, 250, 205));
-            CreateCellStyle(package, "-OrangeCellStyle", Color.FromArgb(255, 218, 185));
-            CreateCellStyle(package, "-PurpleCellStyle", Color.FromArgb(230, 190, 255));
-            CreateCellStyle(package, "-GrayCellStyle", Color.FromArgb(224, 224, 224));
-            CreateCellStyle(package, "-CyanCellStyle", Color.FromArgb(175, 238, 238));
-            CreateCellStyle(package, "-TealCellStyle", Color.FromArgb(180, 255, 255));
-            CreateCellStyle(package, "-PinkCellStyle", Color.FromArgb(255, 182, 193));
-            CreateCellStyle(package, "-BrownCellStyle", Color.FromArgb(210, 180, 140));
+            CreateCellStyle(package, "-RedCellStyle", Color.FromArgb(230, 184, 183));
+            CreateCellStyle(package, "-BlueCellStyle", Color.FromArgb(148, 191, 205));
+            CreateCellStyle(package, "-GreenCellStyle", Color.FromArgb(169, 230, 169));
+            CreateCellStyle(package, "-YellowCellStyle", Color.FromArgb(230, 225, 180));
+            CreateCellStyle(package, "-OrangeCellStyle", Color.FromArgb(230, 193, 160));
+            CreateCellStyle(package, "-PurpleCellStyle", Color.FromArgb(205, 165, 230));
+            CreateCellStyle(package, "-GrayCellStyle", Color.FromArgb(199, 199, 199));
+            CreateCellStyle(package, "-CyanCellStyle", Color.FromArgb(150, 213, 213));
+            CreateCellStyle(package, "-TealCellStyle", Color.FromArgb(155, 230, 230));
+            CreateCellStyle(package, "-PinkCellStyle", Color.FromArgb(230, 157, 168));
+            CreateCellStyle(package, "-BrownCellStyle", Color.FromArgb(185, 155, 115));
 
             // === Set Column Widths ===
             worksheet.Column(1).Width = firstColumnWidth;
@@ -89,7 +89,7 @@ class ExcelPlanner
 
                 worksheet.Cells[2, col].Value = dayNum;
 
-                if (dayNum <= 5) 
+                if (dayNum <= 5)
                 {
                     worksheet.Cells[1, col].StyleName = "WorkdayStyle";
                     worksheet.Cells[2, col].StyleName = "WorkdayStyle";
